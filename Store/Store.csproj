@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7553FE75-389E-4646-A4D8-8CE39BA780B6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Store</RootNamespace>
+    <AssemblyName>Store</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context.cs" />
+    <Compile Include="Forms\FormsCustomer\FormAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsCustomer\FormAddCustomer.Designer.cs">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsCustomer\FormUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsCustomer\FormUpdateCustomer.Designer.cs">
+      <DependentUpon>FormUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsOrder\FormAddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsOrder\FormAddOrder.Designer.cs">
+      <DependentUpon>FormAddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsOrder\FormSearchOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsOrder\FormSearchOrder.Designer.cs">
+      <DependentUpon>FormSearchOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsProducer\FormAddProducer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsProducer\FormAddProducer.Designer.cs">
+      <DependentUpon>FormAddProducer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsProducer\FormSearchProducer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsProducer\FormSearchProducer.Designer.cs">
+      <DependentUpon>FormSearchProducer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsProducer\FormUpdateProducer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsProducer\FormUpdateProducer.Designer.cs">
+      <DependentUpon>FormUpdateProducer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803291059336_mi.cs" />
+    <Compile Include="Migrations\201803291059336_mi.Designer.cs">
+      <DependentUpon>201803291059336_mi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="old\FormDeleteItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="old\FormDeleteItem.Designer.cs">
+      <DependentUpon>FormDeleteItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="old\FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="old\FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsCustomer\FormSearchCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsCustomer\FormSearchCustomer.Designer.cs">
+      <DependentUpon>FormSearchCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStore.Designer.cs">
+      <DependentUpon>FormStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="old\FormViewAllItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="old\FormViewAllItem.Designer.cs">
+      <DependentUpon>FormViewAllItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\Producer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Service.cs" />
+    <Compile Include="Services\ServicesCustomer.cs" />
+    <Compile Include="Services\ServicesOrder.cs" />
+    <Compile Include="Services\ServicesProducer.cs" />
+    <Compile Include="Store.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormsCustomer\FormAddCustomer.resx">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsCustomer\FormUpdateCustomer.resx">
+      <DependentUpon>FormUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsOrder\FormAddOrder.resx">
+      <DependentUpon>FormAddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsOrder\FormSearchOrder.resx">
+      <DependentUpon>FormSearchOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsProducer\FormAddProducer.resx">
+      <DependentUpon>FormAddProducer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsProducer\FormSearchProducer.resx">
+      <DependentUpon>FormSearchProducer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsProducer\FormUpdateProducer.resx">
+      <DependentUpon>FormUpdateProducer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803291059336_mi.resx">
+      <DependentUpon>201803291059336_mi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="old\FormDeleteItem.resx">
+      <DependentUpon>FormDeleteItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="old\FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsCustomer\FormSearchCustomer.resx">
+      <DependentUpon>FormSearchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStore.resx">
+      <DependentUpon>FormStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="old\FormViewAllItem.resx">
+      <DependentUpon>FormViewAllItem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
